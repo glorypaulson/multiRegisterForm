@@ -109,3 +109,27 @@ footer p {
     font-size: small;
     text-align: left;
   }
+  @media only screen and (max-width: 600px) {
+    /* Styles for screens up to 600px wide */
+    body {
+        /* Adjust styles for smaller screens */
+        background-size: 60%;
+    }
+
+    main {
+        /* Adjust styles for smaller screens */
+        width: 90%;
+    }
+  }
+
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 10px var(--primary-color-two);
+    }
+    50% {
+      box-shadow: 0 0 30px var(--primary-color-two);
+    }
+    100% {
+      box-shadow: 0 0 10px var(--primary-color-two);
+    }
+  }
