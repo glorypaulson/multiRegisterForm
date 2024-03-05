@@ -1,46 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Responsive Web Developer Starter - devchallenges.io</title>
+    <title>Multi Register Form</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="any">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <header>
-        <div class="get-started">Get started by editting <b>index.html</b></div>
-        <img class="logo" src="images/logo.svg" alt="Main Logo">
-    </header>
 
+<body class="body">
     <main>
-        <img src="images/devchallenges-logo.svg" alt="A beautiful landscape">
-        <h3 class="title">Responsive Web Developer Starter</h3>
+        <!-- page 1 -->
+        <div class="p-5 container">
+            <div>
+                <p class="font-weight-bold register">Register</p>
+                <div class="name d-flex flex-column">
+                    <label for="name" class="mb-3">Name </label>
+                    <input class="name-box" type="text" name="Name" id="name" placeholder="Enter your name">
+                    <span id="nameValidation" class="d-none mb-3">Name Cant be empty</span>
+                </div>
+                <div class="email d-flex flex-column">
+                    <label for="email" class="mb-3">Email </label>
+                    <input class="email-box" type="email" name="email" id="email" placeholder="example@gmail.com">
+                    <span id="emailValidation" class="d-none mb-3">Email Cant be empty</span>
+                    <span id="emailValidation2" class="d-none mb-3">Please Enter Valid Email Address</span>
+                </div>
+                <div class="mt-4 d-flex flex-column align-items-center"><button type="button"
+                        class="continue-btn">Continue</button></div>
+            </div>
+        </div>
+        <!-- page2 -->
+        <div class="p-5 container d-none">
+            <div>
+                <p class="font-weight-bold register">Which Topics You Are Interested In?</p>
+                <div class="d-flex flex-column">
+                    <label class="option mb-3"><input class="optionCheckbox" type="checkbox"> Software
+                        Development</label>
+                    <label class="option mb-3"><input class="optionCheckbox" type="checkbox"> User Experience</label>
+                    <label class="option mb-3"><input class="optionCheckbox" type="checkbox"> Graphic Design</label>
+                    <div class="mt-4 d-flex flex-column align-items-center"><button type="button"
+                            class="continue-btn">Continue</button></div>
+                </div>
+            </div>
+        </div>
+        <!-- page 3 -->
+        <div class="p-5 container d-none">
+            <div>
+                <p class="font-weight-bold register">Summary</p>
+                <div class="d-flex flex-column">
+                    <p>Name: <span id="nameOutput"></span></p>
+                    <p>Email: <span id="emailOutput"></span></p>
+                    <p>Topics:</p>
+                    <ul id="ul"></ul>
+                    <div class="mt-4 d-flex flex-column align-items-center"><button type="submit"
+                            class="continue-btn">Confirm</button></div>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <footer>
-        <a class="link-card" href="https://devchallenges.io/" target="_blank">
-            <div class="link-title">Challenges</div>
-            <div class="link-description">Choose a challenge and start learning by building real-life projects.</div>
-        </a>
-
-        <a class="link-card" href="https://devchallenges.io/challenges" target="_blank">
-            <div class="link-title">Solutions</div>
-            <div class="link-description">Checkout how orders solve the challenges, compare with yours and give them feedback.</div>
-        </a>
-
-        <a class="link-card" href="https://devchallenges.io/" target="_blank">
-            <div class="link-title">Blogs</div>
-            <div class="link-description">Checkout devchallenges blogs, tutorials, updates. Find useful resources to get you started.</div>
-        </a>
-
-        <a class="link-card" href="https://devchallenges.io/" target="_blank">
-            <div class="link-title">Deploy</div>
-            <div class="link-description">How to deploy and submit your solution.</div>
-        </a>
-       
+    <footer class="d-flex mt-4 ">
+        <p>Step <span id="Counter">1</span> of 3 </p>
+        <div class="d-flex ms-5">
+            <span class="progress progressActive" id="dot-1"></span>
+            <span class="progress" id="dot-2"></span>
+            <span class="progress" id="dot-3"></span>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
