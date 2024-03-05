@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: left -15rem top -15rem , bottom -25rem right -25rem;
-    background-image: url(/images/blur-radial.svg) , url(/images/blur-radial.svg);
+    background-image: url(../images/blur-radial.svg) , url(../images/blur-radial.svg);
 }
 .container{
     min-width: 60vh;
